@@ -1,0 +1,1212 @@
+# CSS AND BOOTSTRAP
+IDE'S and Tools;
+=================
+
+-STS
+  https://spring.io/tools
+
+-Visual studio
+https://code.visualstudio.com/Download
+
+-git
+https://git-scm.com/downloads
+
+-tomcat 
+ https://tomcat.apache.org/download-80.cgi#8.5.82
+
+
+-jenkins
+https://www.jenkins.io/download/
+
+
+-docker
+ -https://docs.docker.com/desktop/install/windows-install/
+
+
+
+
+CSS
+---
+
+  Folder  Structure :
+  -------------------
+
+       emsapp
+         - pages
+            - index.html
+         - css
+              mycss.css
+         - js
+              myjs.js
+         - images
+            .jpeg
+            etc...
+
+
+
+
+Website -> which includes the group of web pages
+
+web page -> which includes the text, images, audio, video etc...
+
+
+CSS( Cascading style sheet)
+
+|-> we can use css in order to override the default sytle of HTML and apply various styles like padding, margin, colors, transformation and anmations etc...
+
+|-> we can use CSS with the HTML in following 3 ways;
+          1. Inline approach
+          2. Internal approach
+          3. External approach
+
+ 1. Inline approach:
+ --------------------
+     <tag style="property:value">.......</tag>
+
+
+
+tag:
+<tag>
+
+</tag>
+
+attribute: It will provide the meta information about the tag.
+|-> it will contain the value and the value will be inclose in single or double quote.
+
+
+Eg:
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>HOME PAGE</title>
+    </head>
+    <body>
+        <h1 style="color:blue;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 40px;margin:10px 10px">FIRST LINE</h1>
+        <h1 style="color:blue;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 40px;margin:10px 10px">SECOND LINE</h1>
+        <h1 style="color:blue;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 40px;margin:10px 10px">THIRD LINE</h1>
+
+        
+        
+          <hr/>
+          <p>This is new web page.....</p>
+             
+
+</body>
+</html>
+
+===================================================================================================================
+
+2. internal approach:
+----------------------
+
+syntax:
+-------
+   selector {
+      property : value
+   }
+
+
+|-> in this case we need to use the <style> tag this tag is part of head tag or child tag of head tag.
+
+|-> Inside the <head> tag we use the following information:
+       a. character encoding information
+       b. responsive information
+       c. title information
+       d. css information
+       e. also java script code information
+
+
+Why selector?
+Ans: To select any HTML element we use the selectors
+
+|-> CSS selector:
+-------------------
+1. Element / Tag selector
+2. Id selector
+3. Class selector
+4. Attribute selector
+5. Pseudo selector
+
+
+
+
+2.Id selector:
+==============
+
+|-> It is used to apply some styles for a specific element / tag for this we have to give a unique id and we select
+the id and apply styles to it.
+
+eg:
+--
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>HOME PAGE</title>
+        <style>
+
+            h1,h2,h3{
+               color:blue;
+               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+               font-size:40px;
+               margin:10px
+            }
+
+            #st1{
+                background-color: black;
+                
+            }
+            #st2{
+                color: white;
+            }
+            .c1{
+                background-color: cyan;
+                
+            }
+            .c2{
+                color:white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>FIRST LINE</h1>
+        <h2 id="st1">SECOND LINE</h2>
+        <h3 class="c1 c2">THIRD LINE</h3>
+
+        
+        
+          <hr/>
+          <p>This is new web page.....</p>
+             
+
+</body>
+</html>
+
+
+=========================================================================================================
+
+Difference b/w id and class?
+
+  Id                                  Vs                        Class
+  --------------------------------------------------------------------
+  We can attach only one id                                  we can  attach multiple class
+   selector to an tag/element                                selector to an tag/element.
+
+
+  The name of the id starts                                  we can assigned to the element
+  with # symbol followed by                                  and its name starts with '.' folowed
+  a unique id name.                                          by class name
+
+
+  It is used to use only                                     It can use for variouse times on a single page.
+  for one speicific element
+
+  #id{                                                        .className{
+      property:value                                               property:value
+  																}
+  }
+
+  ============================================================================================================
+
+3. Attribute Selector:
+====================
+
+|-> by using css we can even select a specific attribute of  a HTML element and apply styles to it.
+   These styles are used when we apply some styles only for a text box or password box.
+   both using with input tag.
+
+
+
+4. Pseudo Selector:
+-------------------
+
+|-> An action which is user is performing on the webpage is called as event.
+
+|-> Pseudo selector is used to apply the CSS styles for some special events on the browser.
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>HOME PAGE</title>
+        <style>
+
+            h1,h2,h3{
+               color:blue;
+               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+               font-size:40px;
+               margin:10px
+            }
+
+            #st1{
+                background-color: black;
+                
+            }
+            #st2{
+                color: white;
+            }
+            .c1{
+                background-color: cyan;
+                
+            }
+            .c2{
+                color:white;
+            }
+            input[type='text'] {
+                background-color: lightblue;
+                border-radius: 10px;
+                border-color: lightyellow;
+                font-size: 30px;
+                margin-top:10px;
+            }
+            input[type='number'] {
+                background-color: red;
+                border-radius: 10px;
+                border-color: lightyellow;
+                font-size: 30px;
+                margin-top:10px;
+            }
+
+            input[type='text']:focus{
+                background-color: burlywood;
+            }
+
+            input[type='text']:hover{
+                background-color:aquamarine;
+            }
+
+            h2:hover{
+                color: red;
+                font-size:100px
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>FIRST LINE</h1>
+        <h2 id="st1">SECOND LINE</h2>
+        <h3 class="c1 c2">THIRD LINE</h3>
+         <hr/>
+        <h2>PRODUCT FORM</h2>
+        
+        <form action="" method="get">
+            PID:<input type="text"><br/>
+            PNAME:<input type="text"><br/>
+            PRICE:<input type="number"><br/>
+            <input type="submit" value="STORE"/>
+            
+        </form>
+
+</body>
+</html>
+
+
+===================================================================================================================
+CSS colors:
+------------
+ 1. textual colors
+
+            color: name;
+ 2. HEX
+ range : 00-FF
+    #000000 to #FFFFFF
+
+ 3. RGB
+           rgb(0,0,0)
+           to
+           rgb(255,255,255)
+
+ 4. RGBA
+           rgb(red,green,blue,alpha)
+
+           alpha: 0 and 1
+ 5. HSL
+   (hue,saturation,lightness)
+hue-> a degree of a colow wheel
+(0:red,120:green,240:blue,360:black)
+ saturation -> a percentage value
+ 0% means it is shade of gray, 100% is the full color
+ lightness
+ 0% is black
+ 50% is neither light nor  dark
+ 100% is white
+ 6. HSLA
+
+eg:
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>HOME PAGE</title>
+        <style>
+
+            h1,h2,h3{
+               color:blue;
+               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+               font-size:40px;
+               margin:10px
+            }
+
+            #st1{
+                background-color: black;
+                
+            }
+            #st2{
+                color: white;
+            }
+            .c1{
+                background-color: cyan;
+                
+            }
+            .c2{
+                color:white;
+            }
+            input[type='text'] {
+                background-color: lightblue;
+                border-radius: 10px;
+                border-color: lightyellow;
+                font-size: 30px;
+                margin-top:10px;
+            }
+            input[type='number'] {
+                background-color: red;
+                border-radius: 10px;
+                border-color: lightyellow;
+                font-size: 30px;
+                margin-top:10px;
+            }
+
+            input[type='text']:focus{
+                background-color: burlywood;
+            }
+
+            input[type='text']:hover{
+                background-color:aquamarine;
+            }
+
+            body{
+                background-color: hsla(360, 43%, 47%,0.6);
+
+            }     
+            
+        </style>
+    </head>
+    <body>
+        <h1>FIRST LINE</h1>
+        <h2 id="st1">SECOND LINE</h2>
+        <h3 class="c1 c2">THIRD LINE</h3>
+         <hr/>
+        <h2>PRODUCT FORM</h2>
+        
+        <form action="" method="get">
+            PID:<input type=""><br/>
+            PNAME:<input type="text"><br/>
+            PRICE:<input type="number"><br/>
+            <input type="submit" value="STORE"/>
+            
+        </form>
+
+</body>
+</html>
+
+ CSS background:
+ ----------------
+img with css:
+-------------
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>HOME PAGE</title>
+        <style>
+            img{
+                width:350px;
+                height:220px;
+                
+            }
+
+            img:hover{
+                 border-style: dashed;
+                 border-color: red;
+                 border-radius: 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+       <img src="../images/2.jpg" alt="stil loading....">
+
+</body>
+</html>
+
+=================================================================================================================
+case study: develop the simple page with background image and text on the image.
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>HOME PAGE</title>
+        <style>
+            body{
+                margin:0px;
+                padding:0px;
+            }
+            .myimg{
+                background-image: url("../images/4.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 250px;
+                position: relative;
+            }
+            .mytext{
+                color:white;
+                margin-top:170px;
+                margin-left:600px;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                font-size:20px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-style: normal;
+                text-indent: block;
+            }
+
+        </style>
+    </head>
+    <body>
+       <div class="myimg">
+                 <div class="mytext">
+                        <h2>ZOMOTO</h2>
+                        <p>Discover the best food & drinks in Hyderabad</p>
+                 </div>
+
+       </div>
+         
+</body>
+</html>
+==================================================================================================================
+CSS Display Property:
+=====================
+
+|->The HTML elements/tags are divided into 2 categories:
+
+   1. Inline elements
+       <a> , <span> , <input> , <button>, <img>
+        
+
+   2. Block Level elements
+      <p> , <div>,<h1>....<h6> , all the HTML 5 layout tags
+
+
+border:
+-------
+1. border-width
+
+2. border-style
+    - solid
+    - dotted
+    - double
+    - dashed
+    - hidden
+
+3.border-color
+
+
+EG:
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>HOME PAGE</title>
+        <style>
+           img{
+            width:300px;
+            height:200px;
+            display: inline-block;
+            padding:10px;
+            border:5px solid red;
+            border-radius: 90px;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="../images/5.jpg" alt="still loading.."> 
+        <img src="../images/6.jpg" alt="still loading.."> 
+        <img src="../images/7.jpg" alt="still loading..">
+         
+</body>
+</html>
+========================================================================================================
+simple gallery:
+----------------
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>HOME PAGE</title>
+        <style>
+            div{
+                display: inline-block;
+                margin:9px;
+                width:380px;
+                
+            }
+            .s1,.s2,.s3{
+                border:7px solid black;
+                border-radius: 20px;
+                padding:30px;
+            }
+            img{
+                margin:9px;
+                width:350px;
+                height:200px;
+                padding:10px;
+                border:5px solid lightpink;
+                border-radius: 90px;
+            }
+            h3{
+                margin-left:60px;
+                text-transform: capitalize;
+                text-indent: 30px;
+            }
+            p{
+                text-transform: uppercase;
+                text-align: center;
+                
+            }
+           
+        </style>
+    </head>
+    <body>
+         <div class="s1">
+              <img src="../images/5.jpg" alt="still loading...">
+              <h3>JAVA</h3>
+              <p>Learn to code like a pro through intense short-term programs. 
+                Best suited for graduates and <span style="background-color: yellow;font-style:italic"><b>young professionals</b></span> seeking to launch their career in a hyper-competitive industry.</p>
+         </div>
+
+         <div class="s2">
+            <img src="../images/6.jpg" alt="still loading...">
+            <h3>JAVA</h3>
+            <p>Learn to code like a pro through intense short-term programs. 
+                Best suited for graduates and <span style="background-color: yellow;">young professionals</span> seeking to launch their career in a hyper-competitive industry.</p>
+       </div>
+       
+       <div class="s3">
+        <img src="../images/7.jpg" alt="still loading...">
+        <h3>JAVA</h3>
+        <p>Learn to code like a pro through intense short-term programs. 
+            Best suited for graduates and <span style="background-color: yellow;">young professionals</span> seeking to launch their career in a hyper-competitive industry.</p>
+   </div>
+</body>
+</html>
+==================================================================================================================
+navbar:
+-------
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>HOME PAGE</title>
+    <style>
+      .container {
+        width: 100%;
+        height: 1200px;
+      }
+
+      .headerPart {
+        width: 100%;
+        height: 250px;
+        background-color: black;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 30px;
+      }
+      .headerPart img {
+        width: 200px;
+        height: 100px;
+        border-radius: 1000px;
+        margin: 5px;
+      }
+      ul {
+        list-style-type: none;
+        margin-left: 450px;
+      }
+      li {
+        display: inline;
+      }
+      li a {
+        text-decoration: none;
+        padding: 10px;
+        color: white;
+      }
+      li a:hover {
+        background-color: beige;
+        color: black;
+      }
+      hr {
+        background-color: red;
+      }
+
+      .footerPart {
+        width: 100%;
+        height: 250px;
+        background-color: black;
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 30px;
+        margin-top: 30px;
+        text-align: center;
+        position: relative;
+      }
+      .c1 {
+        position: absolute;
+        margin-top: 20px;
+        margin-left: 500px;
+      }
+
+      .contentPart {
+        width: 100%;
+        height: 700px;
+
+        position: relative;
+      }
+      img {
+        width: 300px;
+        height: 200px;
+        display: inline-block;
+        padding: 10px;
+         
+        border-radius: 90px;
+      }
+   
+    .s1,.s2,.s3{
+        border-radius: 20px;
+        padding:30px;
+        display: inline-block;
+        margin:9px;
+        width:380px;
+    }
+    img{
+        margin:9px;
+        width:350px;
+        height:200px;
+        padding:10px;
+        border-radius: 90px;
+    }
+    h3{
+        margin-left:60px;
+        text-transform: capitalize;
+        text-indent: 30px;
+    }
+    p{
+        text-transform: uppercase;
+        text-align: center;
+        
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="headerPart">
+        <!-- 1. company logo-->
+        <img src="../images/cgi.jpg" alt="" />
+        <hr />
+        <!-- 2. navigation bar-->
+
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="../pages/aboutus.html" target="_blank">ABOUTUS</a></li>
+          <li><a href="../pages/service.html" target="_blank">SERVICE</a></li>
+          <li><a href="../pages/login.html" target="_blank">LOGIN</a></li>
+        </ul>
+      </div>
+
+      <div class="contentPart">
+        <div class="s1">
+          <img src="../images/5.jpg" alt="still loading..." />
+          <h3>JAVA</h3>
+          <p>
+            Learn to code like a pro through intense short-term programs. Best
+            suited for graduates and
+            <span style="background-color: yellow; font-style: italic"
+              ><b>young professionals</b></span
+            >
+            seeking to launch their career in a hyper-competitive industry.
+          </p>
+        </div>
+
+        <div class="s2">
+          <img src="../images/6.jpg" alt="still loading..." />
+          <h3>JAVA</h3>
+          <p>
+            Learn to code like a pro through intense short-term programs. Best
+            suited for graduates and
+            <span style="background-color: yellow">young professionals</span>
+            seeking to launch their career in a hyper-competitive industry.
+          </p>
+        </div>
+
+        <div class="s3">
+          <img src="../images/7.jpg" alt="still loading..." />
+          <h3>JAVA</h3>
+          <p>
+            Learn to code like a pro through intense short-term programs. Best
+            suited for graduates and
+            <span style="background-color: yellow">young professionals</span>
+            seeking to launch their career in a hyper-competitive industry.
+          </p>
+        </div>
+      </div>
+
+      <div class="footerPart">
+        <div class="c1">&#169;copywrite-2022-CGI-BATCH2-PROJECT</div>
+      </div>
+    </div>
+  </body>
+</html>
+=================================================================================================================
+DAY        : 2
+DATE       : 13-09-2022
+TOPIC      : Bootstrap
+NOTES LINK :
+https://tinyurl.com/batch-2-day2notes
+
+
+
+
+Media queries:
+--------------
+
+//small device  (phone,576px and up)
+@media(min-width:576px){.....}
+
+//medium device  (tablets,768px and up)
+@media(min-width:768px){.....}
+
+
+//large device  (desktop,920px and up)
+@media(min-width:920px){.....}
+
+
+//extra large device  (large desktop,1200px and up)
+@media(min-width:1200px){.....}
+
+
+Based on these media queries, the screens are divided into 4 sections in bootstrap.
+
+Sm- small screen
+Md- medium screen
+Lg- large screen
+Xl- extra large screen
+
+
+Bootstrap:
+----------
+What is bootstrap?
+Ans: It is HTML,CSS and JS framework for developing a responsive and mobile friendly website.
+
+
+    1. Grid system 
+    2. Classes
+    3. Components
+
+
+
+Installation of bootstrap:
+--------------------------
+There are 3 ways we can install bootstrap:
+  1. using npm
+  2. CDN
+  3. offline version
+
+
+==================================================================================================================
+1. Basic typography in bootstrap:
+----------------------------------
+-we have the following display class and also we have the text transformation related classes.
+
+Eg:
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    
+    
+     <p class="display-1">first line</p>
+     <p class="display-2">first line</p>
+     <p class="display-3">first line</p>
+     <p class="display-4">first line</p>
+     
+     <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id possimus est animi voluptas aut. Blanditiis voluptatum ipsam veniam culpa aliquid unde, quia minus praesentium eaque. Eius vero suscipit dolor alias!</p>
+     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id possimus est animi voluptas aut. Blanditiis voluptatum ipsam veniam culpa aliquid unde, quia minus praesentium eaque. Eius vero suscipit dolor alias!</p>
+     <p class="text-uppercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error ullam mollitia accusantium tempora, et, nihil doloribus est consequuntur fuga saepe neque ex. Provident porro quo deserunt eius quasi omnis ipsum.</p>
+     <p class="text-lowercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error ullam mollitia accusantium tempora, et, nihil doloribus est consequuntur fuga saepe neque ex. Provident porro quo deserunt eius quasi omnis ipsum.</p>
+     <p class="text-capitalize">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error ullam mollitia accusantium tempora, et, nihil doloribus est consequuntur fuga saepe neque ex. Provident porro quo deserunt eius quasi omnis ipsum.</p>
+     
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+===================================================================================================================
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    
+    
+     <p class="display-1">first line</p>
+     <p class="display-2">first line</p>
+     <p class="display-3">first line</p>
+     <p class="display-4">first line</p>
+     
+     <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id possimus est animi voluptas aut. Blanditiis voluptatum ipsam veniam culpa aliquid unde, quia minus praesentium eaque. Eius vero suscipit dolor alias!</p>
+     <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id possimus est animi voluptas aut. Blanditiis voluptatum ipsam veniam culpa aliquid unde, quia minus praesentium eaque. Eius vero suscipit dolor alias!</p>
+     <p class="text-uppercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error ullam mollitia accusantium tempora, et, nihil doloribus est consequuntur fuga saepe neque ex. Provident porro quo deserunt eius quasi omnis ipsum.</p>
+     <p class="text-lowercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error ullam mollitia accusantium tempora, et, nihil doloribus est consequuntur fuga saepe neque ex. Provident porro quo deserunt eius quasi omnis ipsum.</p>
+     <p class="text-capitalize">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error ullam mollitia accusantium tempora, et, nihil doloribus est consequuntur fuga saepe neque ex. Provident porro quo deserunt eius quasi omnis ipsum.</p>
+     
+     
+     <a href="#">LINK1</a>
+     <a href="#">LINK2</a>
+     <a href="#">LINK3</a>
+
+    <blockquote class="blockquote text-center">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestias, id placeat rerum sint maxime quo consectetur provident. Ea architecto incidunt qui tempore repellendus illo unde veritatis non ipsa asperiores?</p>
+
+    </blockquote>
+
+
+    <blockquote class="blockquote text-sm-center">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestias, id placeat rerum sint maxime quo consectetur provident. Ea architecto incidunt qui tempore repellendus illo unde veritatis non ipsa asperiores?</p>
+
+    </blockquote>
+
+    <blockquote class="blockquote text-md-center">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas molestias, id placeat rerum sint maxime quo consectetur provident. Ea architecto incidunt qui tempore repellendus illo unde veritatis non ipsa asperiores?</p>
+
+    </blockquote>
+
+    <!--converting block to inline level-->
+    <h1 class="d-inline">MESSAGE...</h1>
+
+    <h1 class="d-inline">MESSAGE...</h1>
+
+    <!--converting inline level to block level-->
+
+    <a href="#" class="d-block">Link1</a> <a href="#" class="d-block">Link2</a>
+
+
+    <div class="d-inline-block bg-success">
+            <h3>java</h3>
+            java is programming lang.
+    </div>
+
+    <div class="d-inline-block bg-success">
+        <h3>python</h3>
+        python is programming lang.
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+</body>
+</html>
+===============================================================================================================
+Colors & Background:
+--------------------
+
+    <p class="text-primary display-1 float-left bg-info">first line</p>
+    <p class="text-success display-1 text-center bg-danger">second line</p>
+    <p class="text-info display-1 float-right bg-success">third line</p>
+    <p class="text-danger display-1 bg-secondary">fourth line</p>
+    
+    
+Spacing in Bootstrap:
+---------------------
+
+Margin  : spaces b/w the elements
+Padding : spaces around the content
+
+
+
+CSS position:
+-------------
+1. position:relative:
+---------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/mycss.css">
+</head>
+<body>
+    
+     <div class="c1">
+                
+                    <div class="c2">
+                            hello
+                    </div>
+
+     </div>
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+mycss.css
+---------
+body{
+    margin:0px;
+    padding: 0px;
+    background-color: antiquewhite;
+}
+.c1{
+    width:500px;
+    height:500px;
+    background-color: cyan;
+    margin: 10px;
+    position: relative;
+    
+}
+.c2{
+    width:250px;
+    height: 250px;
+    background-color: red;
+    margin-left: 100px;
+    margin-top:100px;
+    position: absolute;
+    padding-left:100px;
+    padding-top:100px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+=================================================================================================================
+Margin related class in bootstrap:
+----------------------------------
+margin classes has categorize into six
+    m-0
+    m-1
+    m-2
+    m-3
+    m-4
+    m-5
+m-> apply all the side
+mb->apply margin at bottom
+mt->apply margin at top
+ml->apply margin at left
+mr->apply margin at right
+mx->apply margin at left and right
+my->apply margin at top and bottom
+
+padding classes has following categorize :
+  p-0
+  p-1
+  p-2
+  p-3
+  p-4
+  p-5
+================================================================================================================
+width and height:
+------------------
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME PAGE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h2 class="bg-info ml-1 pt-2 w-25">First Line</h2>
+    <h2 class="bg-info ml-1 pt-2 w-50">Second Line</h2>
+    <h2 class="bg-info ml-1 pt-2 w-75">Third Line</h2>
+    <h2 class="bg-info ml-1 pt-2 w-100">Fourth Line</h2>
+
+    <hr />
+    <div style="height: 300px; border: 1px solid red">
+      <h2 class="bg-info d-inline-block h-25">First Line</h2>
+      <h2 class="bg-info d-inline-block h-50">Second Line</h2>
+      <h2 class="bg-info d-inline-block h-75">Third Line</h2>
+      <h2 class="bg-info d-inline-block h-100">Fourth Line</h2>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+==============================================================================================================
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME PAGE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h2 class="bg-info ml-1 pt-2 w-25">First Line</h2>
+    <h2 class="bg-info ml-1 pt-2 w-50">Second Line</h2>
+    <h2 class="bg-info ml-1 pt-2 w-75">Third Line</h2>
+    <h2 class="bg-info ml-1 pt-2 w-100">Fourth Line</h2>
+
+    <hr />
+    <div style="height: 300px; border: 1px solid black">
+      <h2 class="bg-info d-inline-block h-25 border border-danger rounded">First Line</h2>
+      <h2 class="bg-info d-inline-block h-50">Second Line</h2>
+      <h2 class="bg-info d-inline-block h-75">Third Line</h2>
+      <h2 class="bg-info d-inline-block h-100 border border-warning rounded-right">Fourth Line</h2>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+=================================================================================================================
+dropdown list:
+--------------
+
+    <div class="dropdown">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">Drop Down List</button>
+   
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">JAVA</a>
+                <a href="#" class="dropdown-item">Python</a>
+                <a href="#" class="dropdown-item">DATABASE</a>
+             </div>
+
+    </div>
+
+================================================================================================================
+Forms in Bootstrap:
+--------------------
+1. .form-group
+
+2. .form-control
+
